@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multiplecontainers
+  labels:
+    app: jenkins-nginx
+spec:
+  containers:
+    - name: jenkins-container
+      image: jenkins/jenkins:lts
+      ports:
+      - containerPort: 80
+    - name: nginx
+      image: nginx:1.14.2
+      ports:
+      - containerPort: 80
