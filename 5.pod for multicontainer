@@ -14,3 +14,23 @@ spec:
       image: nginx:1.14.2
       ports:
       - containerPort: 80
+---------------or---------------------------------------
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxi-jenk
+  labels:
+    app.kubernetes.io/name: proxy
+spec:
+  containers:
+  - name: nginx
+    image: nginx:stable
+    ports:
+      - containerPort: 80
+        name: http-web-svc
+  - name: jenk
+    image: jenkins/jenkins:lts
+    ports:
+      - containerPort: 90
+        name: http-jenk-svc
