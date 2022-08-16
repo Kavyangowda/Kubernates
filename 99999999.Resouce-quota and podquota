@@ -9,5 +9,14 @@ spec:
     requests.memory: 2Gi
     limits.cpu: "3"
     limits.memory: 3Gi
-~                                                                                                                                                     
-~                        
+           or
+
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: podquota
+  namespace: kavya
+spec:
+  hard:
+    pods: "10"
+                        
