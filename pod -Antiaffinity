@@ -23,7 +23,7 @@ spec:
           image: te97ja/dockermulti:latest
       affinity:
         podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution: (if we give preffered then it it deploy on available nodes)
           - labelSelector:
               matchExpressions:
                 - key: app
