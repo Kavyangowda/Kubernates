@@ -26,7 +26,7 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
-                - key: tomcat
+                - key: app
                   operator: In
                   values:
                     - tomcat
