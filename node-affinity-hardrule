@@ -24,10 +24,9 @@ spec:
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-            - weight: 1
-              preference:
-                matchExpressions:
-                  - key: size
-                    operator: In
-                    values:
-                      - large   
+            nodeSelectorTerms:
+              -  matchExpressions:
+                   - key: size
+                     operator: In
+                     values:
+                       - large  
