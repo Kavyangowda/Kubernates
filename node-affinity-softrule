@@ -28,6 +28,7 @@ spec:
               preference:
                 matchExpressions:
                   - key: size
-                    operator: In
+                    operator: In # notIn (except this node it will deploay on other nodes)
                     values:
                       - large   
+                      - small $(multiple values or multiple labels)
